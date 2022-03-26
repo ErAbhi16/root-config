@@ -57,10 +57,6 @@
         "imports": {
           "@nagp/root-config": "//localhost:9000/nagp-root-config.js",
           "@nagp/navbar": "https://microfrontenddemo.blob.core.windows.net/microfrontendblob/nagp-navbar.js",
-          "@nagp/account": "//localhost:9002/nagp-account.js",
-          "@nagp/admin": "//localhost:9003/nagp-admin.js",
-          "@nagp/products-app": "//localhost:8080/js/app.js",
-          "home-app": "//localhost:4201/main.js",
           "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
           "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
@@ -90,20 +86,6 @@
         <nav class="topnav">
           <application name="@nagp/navbar"></application>
         </nav>
-        <div class="main-content container">
-          <route path="/">
-            <application name="home-app"></application>
-          </route>
-          <route path="account/:id">
-            <application name="@nagp/account"></application>
-          </route>
-          <route path="admin">
-            <application name="@nagp/admin"></application>
-          </route>
-          <route path="product">
-            <application name="@nagp/products-app"></application>
-          </route>
-        </div>
       </single-spa-router>
     </template>
   </head>
