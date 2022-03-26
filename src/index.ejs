@@ -74,6 +74,20 @@
         <nav class="topnav">
           <application name="@nagp/navbar"></application>
         </nav>
+        <div class="main-content container">
+          <route path="/">
+            <application name="home-app"></application>
+          </route>
+          <route path="account/:id">
+            <application name="@nagp/account"></application>
+          </route>
+          <route path="admin">
+            <application name="@nagp/admin"></application>
+          </route>
+          <route path="product">
+            <application name="@nagp/products-app"></application>
+          </route>
+        </div>
       </single-spa-router>
     </template>
   </head>
