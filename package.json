@@ -1,14 +1,12 @@
 {
   "name": "@nagp/root-config",
   "scripts": {
-    "start": "webpack serve --port 9000 --env isLocal",
-    "lint": "eslint src --ext js",
-    "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
-    "format": "prettier --write .",
-    "check-format": "prettier --check .",
-    "prepare": "husky install",
-    "build": "concurrently npm:build:*",
-    "build:webpack": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "lint": "eslint src",
+    "prettier": "prettier --write './**'",
+    "start:dev": "webpack-dev-server --mode=development --port 9000 --env.isLocal=true",
+    "start": "node server.js",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -38,6 +36,8 @@
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
     "single-spa": "^5.9.3",
     "single-spa-layout": "^2.0.1"
   }
